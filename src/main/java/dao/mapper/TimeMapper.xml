@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="dao.mapper.TimeMapper">
+    <select id="queryById" parameterType="int" resultType="TestTime">
+        SELECT * FROM testtime WHERE id=#{id}
+    </select>
+    <insert id="addTestTime" parameterType="TestTime">
+        INSERT INTO testtime VALUES (#{datetest},#{datetimetest},null)
+    </insert>
+</mapper>
